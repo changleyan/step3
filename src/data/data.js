@@ -10,7 +10,7 @@ export const Data = [
     categoria: "Bebidas",
     productos: [
       { producto: "Cerveza", marcas: ["Corona", "Antartica"] },
-      { producto: "Refresco", marcas: ["Pepsi", "Guaraná "] },
+      { producto: "Refresco", marcas: ["Pepsi", "Fanta"] },
     ],
   },
   {
@@ -81,7 +81,7 @@ export const colorMappingData = [
       y: 365,
       categoria: "Bebidas",
       producto: "Refresco",
-      marca: "Guaraná",
+      marca: "Fanta",
     },
 
     {
@@ -170,7 +170,7 @@ export const colorMappingData = [
       y: 756,
       categoria: "Bebidas",
       producto: "Refresco",
-      marca: "Guaraná",
+      marca: "Fanta",
     },
 
     {
@@ -259,7 +259,7 @@ export const colorMappingData = [
       y: 785,
       categoria: "Bebidas",
       producto: "Refresco",
-      marca: "Guaraná",
+      marca: "Fanta",
     },
 
     {
@@ -348,7 +348,7 @@ export const colorMappingData = [
       y: 785,
       categoria: "Bebidas",
       producto: "Refresco",
-      marca: "Guaraná",
+      marca: "Fanta",
     },
 
     {
@@ -437,7 +437,7 @@ export const colorMappingData = [
       y: 987,
       categoria: "Bebidas",
       producto: "Refresco",
-      marca: "Guaraná",
+      marca: "Fanta",
     },
 
     {
@@ -526,7 +526,7 @@ export const colorMappingData = [
       y: 546,
       categoria: "Bebidas",
       producto: "Refresco",
-      marca: "Guaraná",
+      marca: "Fanta",
     },
 
     {
@@ -615,7 +615,7 @@ export const colorMappingData = [
       y: 457,
       categoria: "Bebidas",
       producto: "Refresco",
-      marca: "Guaraná",
+      marca: "Fanta",
     },
 
     {
@@ -646,18 +646,6 @@ export const colorMappingData = [
       producto: "Helado",
       marca: "Fruttare",
     },
-
-    // { x: "Feb", y: 8.9, categoria: "Jan", producto: "Jan", marca: "Jan" },
-    // { x: "Mar", y: 12, categoria: "Jan", producto: "Jan", marca: "Jan" },
-    // { x: "Apr", y: 17.5, categoria: "Jan", producto: "Jan", marca: "Jan" },
-    // { x: "May", y: 22.1, categoria: "Jan", producto: "Jan", marca: "Jan" },
-    // { x: "June", y: 25, categoria: "Jan", producto: "Jan", marca: "Jan" },
-    // { x: "July", y: 29.4, categoria: "Jan", producto: "Jan", marca: "Jan" },
-    // { x: "Aug", y: 29.6, categoria: "Jan", producto: "Jan", marca: "Jan" },
-    // { x: "Sep", y: 25.8, categoria: "Jan", producto: "Jan", marca: "Jan" },
-    // { x: "Oct", y: 21.1, categoria: "Jan", producto: "Jan", marca: "Jan" },
-    // { x: "Nov", y: 15.5, categoria: "Jan", producto: "Jan", marca: "Jan" },
-    // { x: "Dec", y: 9.9, categoria: "Jan", producto: "Jan", marca: "Jan" },
   ],
   ["#FFFF99"],
   ["#FFA500"],
@@ -680,23 +668,23 @@ export const ColorMappingPrimaryYAxis = {
 
 export const rangeColorMapping = [
   {
-    label: "500$ to 700$",
-    start: "500",
-    end: "700",
+    label: "400$ to 600$",
+    start: "400",
+    end: "600",
     colors: colorMappingData[1],
   },
 
   {
-    label: "701$ to 800$",
-    start: "701",
-    end: "800",
+    label: "601$ to 700$",
+    start: "601",
+    end: "700",
     colors: colorMappingData[2],
   },
 
   {
-    label: "801$ to 1000$",
-    start: "801",
-    end: "1000",
+    label: "701$ to 900$",
+    start: "701",
+    end: "900",
     colors: colorMappingData[3],
   },
 ];

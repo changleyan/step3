@@ -5,19 +5,20 @@ import { Data, colorMappingData } from "../data/data";
 import ColorMapping from "./ColorMapping";
 
 const ButtonBar = () => {
+  const getCategorias = () => {
+    let result = Data.map((c) => c.categoria);
+    return result;
+  };
   const getProductos = (categori) => {
-    // console.log("fff");
     let prods = Data.find((c) => c.categoria === categori);
     let result = prods.productos.map((p) => p.producto);
+
     return result;
   };
   const getMarcas = (categori, product) => {
-    // console.log("555");
-    // console.log(categori, product);
     let prods = Data.find((c) => c.categoria === categori);
     let marcs = prods.productos.find((p) => p.producto === product);
-    // console.log(marcs);
-    return marcs.marcas;
+    return marcs === undefined ? [] : marcs.marcas;
   };
 
   const getDataMapping = (categ, produc, marc) => {
@@ -36,7 +37,7 @@ const ButtonBar = () => {
   const [marc, setMarc] = useState(Data[0].productos[0].marcas[0]);
   const [categ, setCateg] = useState(Data[0].categoria);
   //
-  const [categoria, setcategoria] = useState(Data.map((c) => c.categoria));
+  const [categoria, setcategoria] = useState(getCategorias());
   const [productos, setProductos] = useState(getProductos(categ));
   const [marcas, setMarcas] = useState(getMarcas(categ, produc));
 
@@ -50,22 +51,19 @@ const ButtonBar = () => {
 
   useEffect(() => {
     setMarcas(getMarcas(categ, produc));
+    getDataMapping(categ, produc, marc);
   }, [produc]);
 
   useEffect(() => {
-    console.log("wey");
-  }, [marc]);
-
-  useEffect(() => {
     setDataMaping(getDataMapping(categ, produc, marc));
-  }, []);
+  }, [marc]);
 
   return (
     <>
-      <div className="flex justify-between gap-16">
-        <Select data={categoria} inputName="Categorias" callback={setCateg} />
-        <Select data={productos} inputName="Productos" callback={setProduc} />
-        <Select data={marcas} inputName="Marcas" callback={setMarc} />
+      <div className="flex justify-around  flex-wrap w-full items-center">
+        <Select data={categoria} inputName="Categoria" callback={setCateg} />
+        <Select data={productos} inputName="Producto" callback={setProduc} />
+        <Select data={marcas} inputName="Marca" callback={setMarc} />
       </div>
       <br />
       <ColorMapping colorMappingData={dataMaping} />

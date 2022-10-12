@@ -20,10 +20,8 @@ import {
 import ChartsHeader from "./ChartsHeader";
 
 const ColorMapping = ({ colorMappingData }) => {
-  // console.log("colorMappingData");
-  // console.log(colorMappingData);
   return (
-    <div className="m-4 md:m-10 mt-24 p-10 w-full bg-main-dark-bg ">
+    <div className="m-4 md:m-10 p-2 px-3 w-full bg-main-dark-bg ">
       <ChartsHeader category="Sales By Month for" />
       <div className="w-full">
         <ChartComponent

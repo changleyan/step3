@@ -13,6 +13,11 @@ export default function Select({ data, inputName, callback }) {
     callback(selected);
   }, [selected]);
 
+  useEffect(() => {
+    setSelected(data[0]);
+    callback(selected);
+  }, [data]);
+
   return (
     <Listbox value={selected} onChange={setSelected}>
       {({ open }) => (
